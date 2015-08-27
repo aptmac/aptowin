@@ -1,0 +1,162 @@
+body{
+    background-color:black;
+    z-index:-1;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-family: Century Gothic;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color:white;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+}
+
+h4
+{
+    font-family: Century Gothic;
+    font-weight: normal;
+    font-size: 20px;
+    color:white;
+    margin: 5px 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: 960px; }
+.clear { clear: both; }
+#header {
+    width: 100%;
+    background: url('../img/header-bg.png');
+    height: 80px;
+    padding-left:30px;
+    position: fixed;
+    min-width:728px;
+    z-index:1;
+}
+ 
+#nav { width: 500px; float: right; margin-top: 20px;}
+
+#logo a { 
+    color: #fff; 
+    text-decoration: none; 
+    float: left; 
+    font-size: 30px; 
+    margin-top: 20px; 
+    color: #fff; 
+    font-family:"Century Gothic"; 
+    font-weight: bold; 
+}
+
+#nav ul{
+    list-style: none;
+    display: block;
+    margin: 0 auto;
+    list-style: none;
+}
+ 
+#nav li{
+    margin-top: 8px;
+    float: left;
+    padding-left: 7px;
+    padding-right: 7px
+}
+ 
+#nav li a { 
+    color: #fff; 
+    opacity:0.9; 
+    font-size: 20px; 
+    text-decoration: none; 
+    font-family: 'Century Gothic'; 
+}
+
+#nav li a:hover { 
+    color: #fff; 
+    opacity:0.3;  
+}
+
+#introduction{
+    background: url(../img/mainsplash5.png) 100% no-repeat;
+    height:525px;
+    min-width: 820px;
+    background-size: 100% auto;
+}
+
+#ap-to-win{
+    background: url(../img/console.png) 100% no-repeat;
+    background-size: 100% auto;
+    white-space:nowrap;
+    min-width:820px;
+    color:white;
+    height:80px;
+    z-index:-1;
+}
+
+#apbanner{
+    background: url(../img/apbanner.png) 100% no-repeat;
+    background-color:black;
+    background-size: 100% auto;
+    height:120px;
+    min-width:820px;
+}
+ 
+#aptable{
+    background-color: white;
+    height: 1100px;
+    padding-top:50px;
+    background-size: cover;
+    min-width:820px;
+    z-index:-1;
+}
+
+#satan-tracker{
+    background: url(../img/console2.png) 100% no-repeat;
+    background-size: 100% auto;
+    white-space:nowrap;
+    min-width:820px;
+    height:80px;
+    color:white;
+}
+
+#teemobanner{
+    background: url(../img/teemobanner.png) 100% no-repeat;
+    background-size: 100% auto;
+    background-color:black;
+    height:120px;
+    min-width:820px;
+}
+ 
+#teemotable{
+    background-color: #fff;
+    height: 330px;
+    padding-top:50px;
+    background-size: cover;
+    min-width:820px;
+    z-index:-1;
+}
+
+#aboutbanner{
+    background: url(../img/about.png) 100% no-repeat;
+    background-size: 100% auto;
+    min-width:820px;
+    height:120px;
+    color:white;
+}
+
+#about{
+    background-color: black;
+    height: 300px;
+    padding-top:20px;
+    padding-left:40px;
+    padding-right:40px;
+    word-wrap:normal;
+    color: #fff;
+    min-width:820px;
+}
