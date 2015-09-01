@@ -7,7 +7,7 @@
       <!--Load the AJAX API. Do this only once per web page! -->
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         <script type="text/javascript">
-             // Load the Visualization API and the piechart package.
+        // Load the Visualization API and the piechart package.
       google.load('visualization', '1.1', {'packages':['bar']});
 
       // Set a callback to run when the Google Visualization API is loaded.
@@ -16,28 +16,67 @@
 
 
       // Callback that creates and populates a data table, 
-      // instantiates the pie chart, passes in the data and
+      // instantiates the chart, passes in the data and
       // draws it.
         function drawAp() {
+            var r = document.getElementById("slt_region");
+            var regionvalue = r.options[r.selectedIndex].value;
+            var l = document.getElementById("slt_lane");
+            var lanevalue = l.options[l.selectedIndex].value;
+            var w = document.getElementById("slt_winner");
+            var winnervalue = w.options[w.selectedIndex].value;
+            
+            
+            
             var data = google.visualization.arrayToDataTable([
-              ['Ludens Echo', '5.11 - Unranked', '5.14 - Unranked', '5.11 - Bronze', '5.14 - Bronze', '5.11 - Silver', '5.14 - Silver', '5.11 - Gold', '5.14 - Gold', '5.11 - Platinum', '5.14 - Platinum', '5.11 - Diamond', '5.14 - Diamond', '5.11 - Master', '5.14 - Master', '5.11 - Challenger', '5.14 - Challenger'],
-              ['Solo Que Rank', 10, 40, 20, 20, 20, 20, 20, 20, 100, 40, 20, 20, 20, 20, 20, 20]
+              ['Ludens Echo', 
+               '5.11 - Unranked', 
+               '5.14 - Unranked', 
+               '5.11 - Bronze', 
+               '5.14 - Bronze', 
+               '5.11 - Silver', 
+               '5.14 - Silver', 
+               '5.11 - Gold', 
+               '5.14 - Gold', 
+               '5.11 - Platinum', 
+               '5.14 - Platinum', 
+               '5.11 - Diamond', 
+               '5.14 - Diamond', 
+               '5.11 - Master', 
+               '5.14 - Master', 
+               '5.11 - Challenger', 
+               '5.14 - Challenger'],
+              [' ', 
+               10, 
+               40, 
+               20, 
+               20, 
+               20, 
+               20, 
+               20, 
+               20, 
+               100, 
+               40, 
+               20, 
+               20, 
+               20, 
+               20, 
+               20, 
+               20]
             ]);
 
             var options = {
-              width:900,
-              height:1050,
+              width :900,
+              height:500,
               colors: ['#bfb4ae','#bf6514','#c0c0c0','#ead669','#32ada5','#add8e6','#00cccc','#03396c'],
               chart: {
-                title: 'A(P)-2-Win',
-                subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+                title: ('Server: ' + regionvalue + '\nLane: ' + lanevalue + '\n' + winnervalue + ' data')
               },
               bars: 'horizontal', // Required for Material Bar Charts.
                 viewWindow:{max:100, min:0.00}
             };
 
-            var chart = new google.charts.Bar(document.getElementById('aptable'));
-
+            var chart = new google.charts.Bar(document.getElementById('graph'));
             chart.draw(data, options);
         }
     
@@ -64,8 +103,10 @@
 
         <div id="introduction">
         </div>
+       
         <div id="ap-to-win">
         </div>
+       
         <div id="apbanner">
         </div>
         
@@ -95,12 +136,17 @@
                     <option value="SUPPORT">Support</option>
                     <option value="ALL">All</option>
                 </select><br>
+                <b>Result:</b>
+                <select id="slt_winner" name="winner">
+                    <option value="winners">Winner</option>
+                    <option value="losers">Loser</option>
+                </select>
                 <button type="button" onclick="test()">Update!</button><br><br>
                 </form>
-             </center>
                 
-            
-            
+                <div id="graph">
+                </div>
+             </center>
         </div>
        
         <div id="satan-tracker">
